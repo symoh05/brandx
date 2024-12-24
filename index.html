@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsavo - Loading</title>
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff8f0; /* Light background for Tsavo */
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Loading Screen Container */
+        .loading-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+
+        /* Tsavo Title */
+        .loading-container h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ff6600; /* Orange color */
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Floating Animation for the Icon */
+        .loading-container .icons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            animation: floatIcons 3s ease-in-out infinite;
+        }
+
+        .loading-container .icons img {
+            width: 50px;
+            height: 50px;
+            animation: floatIcon 2s ease-in-out infinite alternate;
+        }
+
+        /* Spinning Loader Animation */
+        .loading-container .spinner {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #ff6600; /* Orange color */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            margin: 20px auto;
+            animation: spin 1.5s linear infinite;
+        }
+
+        /* Floating Icons Animation */
+        @keyframes floatIcons {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes floatIcon {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Spin Animation */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Fade In Effect */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Loading Message */
+        .loading-message {
+            color: #6a0dad; /* Purple color */
+            font-size: 18px;
+            animation: fadeIn 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <!-- Tsavo Title -->
+        <h1>Welcome to Tsavo</h1>
+
+        <!-- Spinning Loader -->
+        <div class="spinner"></div>
+
+        <!-- Loading Icons (Clothing, Watches, Shoes, Accessories) -->
+        <div class="icons">
+            <img src="https://img.icons8.com/ios/50/000000/t-shirt.png" alt="Clothing" title="Clothing">
+            <img src="img/Apple Watch.jfif" alt="Watch" title="Watches">
+            <img src="https://img.icons8.com/ios/50/000000/sneakers.png" alt="Shoes" title="Shoes">
+            <img src="img/Style Icons_ 5 Women We're Taking Major Fashion Inspo From Right Now.jfif" alt="Accessories" title="Accessories">
+        </div>
+
+        <!-- Loading Message -->
+        <p class="loading-message">Your fashion journey is loading...</p>
+    </div>
+
+    <script>
+        // Redirect to the home page after a delay (adjusted to 7 seconds)
+        setTimeout(function() {
+            window.location.href = 'index.php'; // Redirect to the homepage after 7 seconds
+        }, 7000); // 7000 milliseconds = 7 seconds
+
+        // Optional: Add fade-out effect just before redirection
+        setTimeout(function() {
+            document.querySelector('.loading-container').style.opacity = 0;
+        }, 6500); // Fade out after 6.5 seconds
+    </script>
+</body>
+</html>

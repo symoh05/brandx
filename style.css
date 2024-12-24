@@ -1,0 +1,243 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+header {
+    background-color: purple;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    color: orange;
+}
+
+h2 {
+    text-align: center;
+    color: purple;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product {
+    width: 20px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product h3 {
+    color: orange;
+}
+
+button {
+    background-color: orange;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: purple;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/*added part*/
+
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #5d3ebc;  /* Purple background */
+    color: white;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Main Title and Description */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #5d3ebc;  /* Purple color for main heading */
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #ff6600;  /* Orange color for subheading */
+}
+
+/* Categories Section */
+.categories {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.categories a {
+    background-color: #ff6600;  /* Orange */
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.categories a:hover {
+    background-color: #5d3ebc;  /* Purple hover effect */
+}
+
+/* Product Container */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px);  /* Hover effect to elevate product card */
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 300px;
+}
+
+.product h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Price and Available Information */
+.product p strong {
+    color: #ff6600;  /* Orange for emphasis */
+}
+
+.product .add-to-cart {
+    border: 1px solid rgb(179, 0, 0);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.product .add-to-cart:hover {
+    background-color: #ff6600;  /* Orange hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .categories {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .categories a {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+}
+
